@@ -1,0 +1,23 @@
+header, footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 2.75rem;
+}
+
+main {
+    padding-inline: 2.25rem;
+}
+
+
+@media (width > 768px) {
+  header {
+    display: flex;
+    justify-content: start;
+  }
+
+  main {
+    margin-inline: auto;
+    width: 68.625rem;
+  }
+}
