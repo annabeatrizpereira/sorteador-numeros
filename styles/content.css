@@ -1,14 +1,45 @@
-header, footer {
+header,
+footer {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-block: 2.75rem;
 }
 
-main {
-    padding-inline: 2.25rem;
+footer {
+  font: var(--paragraph-small);
+
+  & a {
+    padding-inline: 0.3rem;
+    color: var(--content-primary);
+
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        var(--gradient-background)
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      display: inline-block;
+    }
+  }
+
+  & img {
+    height: 1rem;
+    padding-inline: 0.3rem;
+  }
 }
 
+main {
+  padding-inline: 2.25rem;
+
+  & h1 {
+    font: var(--display-medium);
+    text-transform: uppercase;
+  }
+}
 
 @media (width > 768px) {
   header {
@@ -19,5 +50,10 @@ main {
   main {
     margin-inline: auto;
     width: 68.625rem;
+
+    & h1 {
+      font: var(--display-large);
+      text-transform: uppercase;
+    }
   }
 }

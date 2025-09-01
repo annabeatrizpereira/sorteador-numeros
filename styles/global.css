@@ -1,41 +1,36 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   /* Content */
-  --content-primary: #FFFFFF;
-  --content-secondary: #C7C9CC;
-  --content-tertiary: #D9D9D9;
-  --content-brand: #C58DE7;
+  --content-primary: #ffffff;
+  --content-secondary: #c7c9cc;
+  --content-tertiary: #d9d9d9;
+  --content-brand: #c58de7;
   --color-inverse: #030203;
 
   /* Background */
   --background-primary: #020202;
   --background-secondary: #111012;
-  --background-tertiary: #24222E;
-  --background-brand: #C58DE7;
-  --background-gray: #3D3D3D;
+  --background-tertiary: #24222e;
+  --background-brand: #c58de7;
+  --background-gray: #3d3d3d;
 
   /* Accent */
-  --accent-pink: #D586E0;
-  --accent-blue: #91A1FA;
-  --accent-green: #77C0AA;
-  --accent-lime: #D1DC97; 
-  --accent-red: #E9A9B3;
+  --accent-pink: #d586e0;
+  --accent-blue: #91a1fa;
+  --accent-green: #77c0aa;
+  --accent-lime: #d1dc97;
+  --accent-red: #e9a9b3;
 
   /* Gradient */
-  --gradient-border: 
-    #77C0AF 0%, 
-    #D1DC97 14.84%,               
-    #E9A9B3 32.15%, 
-    #D586E0 65.79%, 
-    #91A1FA 84.58%;       
-  --gradient-background: #D586E0 0%, #91A1FA 98.93%;
-  --gradient-content: #C7C9CC 0%, #3D3D3D 100%;
-
+  --gradient-border: #77c0af 0%, #d1dc97 14.84%, #e9a9b3 32.15%, #d586e0 65.79%,
+    #91a1fa 84.58%;
+  --gradient-background: #d586e0 0%, #91a1fa 98.93%;
+  --gradient-content: #c7c9cc 0%, #3d3d3d 100%;
 
   /* Fonts */
   --font-sora: "Sora", sans-serif;
@@ -45,17 +40,34 @@
   --display-large: 800 72px/130% var(--font-sora);
   --display-medium: 800 40px/130% var(--font-sora);
   --display-small: bold 32px/130% var(--font-sora);
-  
+
   --overline: bold 16px/150% var(--font-mono);
 
   --paragraph-large: normal 16px/150% var(--font-flex);
-  --paragraph-large: normal 14px/150% var(--font-flex);
-  --paragraph-large: normal 12px/150% var(--font-flex);
+  --paragraph-medium: normal 14px/150% var(--font-flex);
+  --paragraph-small: normal 12px/150% var(--font-flex);
   --label-medium: bold 20px/150% var(--font-flex);
   --label-small: bold 16px/150% var(--font-flex);
 }
 
 body {
-    background: url(../assets/images/background.png) var(--background-primary);
-    color: var(--content-primary);
+  background: url(../assets/images/background.png) var(--background-primary);
+  color: var(--content-primary);
 }
+
+/* texts */
+.overline {
+  font: var(--overline);
+  text-transform: uppercase;
+
+  /* gradient */
+  background: linear-gradient(90deg, var(--content-secondary), var(--background-gray));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  color: transparent; 
+  display: inline-block;
+}
+
+
+
