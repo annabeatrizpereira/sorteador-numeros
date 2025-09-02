@@ -23,38 +23,14 @@
         <h1>Sorteador de números</h1>
       </section>
 
-      <section id="details">
-        <div>
-          <img
-            src="./assets/icons/user-chat.svg"
-            alt="user with a message ballon"
-          />
-          <h3>Como funciona o sorteador de números?</h3>
-          <p>
-            O sorteador utiliza um algoritmo de geração aleatória para criar
-            números dentro do intervalo especificado pelo usuário.
-          </p>
-        </div>
-
-        <div>
-          <img
-            src="./assets/icons/user-chat.svg"
-            alt="user with a message ballon"
-          />
-          <h3>Posso escolher o intervalo dos números?</h3>
-          <p>
-            Sim, você pode definir os valores mínimo e máximo para o intervalo
-            dos números sorteados.
-          </p>
-        </div>
-      </section>
-
       <section id="sort">
-        <h2>Quero Sortear:</h2>
-        <p>
-          Defina o intervalo e a quantidade de números, clique em "Sortear" e
-          veja os resultados na tela. É rápido e fácil!
-        </p>
+        <div class="sort-details">
+          <h2>Quero Sortear:</h2>
+          <p>
+            Defina o intervalo e a quantidade de números, clique em "Sortear" e
+            veja os resultados na tela. É rápido e fácil!
+          </p>
+        </div>
 
         <div class="numbers-wrapper">
           <div>
@@ -72,19 +48,56 @@
         </div>
 
         <div class="toggle-wrapper">
-          <div></div>
+          <div>
+            <label class="switch">
+              <input type="checkbox" id="darkMode" />
+              <span class="slider"></span>
+            </label>
+          </div>
           <span>Não repetir esse número</span>
         </div>
 
-        <button>
-          <span>Sortear</span>
-          <img src="./assets/icons/arrow-right.svg" alt="arrow right icon" />
-        </button>
+        <div class="btn-wrapper">
+          <button>
+            <span>Sortear</span>
+            <img src="./assets/icons/arrow-right.svg" alt="arrow right icon" />
+          </button>
+        </div>
+      </section>
+
+      <section id="details">
+        <div>
+          <img
+            src="./assets/icons/user-chat.svg"
+            alt="user with a message ballon"
+          />
+          <div>
+            <h3>Como funciona o sorteador de números?</h3>
+            <p>
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="./assets/icons/user-chat.svg"
+            alt="user with a message ballon"
+          />
+          <div>
+            <h3>Posso escolher o intervalo dos números?</h3>
+            <p>
+              Sim, você pode definir os valores mínimo e máximo para o intervalo
+              dos números sorteados.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      Feito com <img src="./assets/icons/heart.svg" alt="" /> por 
+      Feito com <img src="./assets/icons/heart.svg" alt="" /> por
       <a href="#">annabeatrizpereira</a>
     </footer>
 

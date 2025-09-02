@@ -6,6 +6,138 @@ footer {
   margin-block: 2.75rem;
 }
 
+main {
+  padding-inline: 2.25rem;
+
+  & #hero {
+    margin-bottom: 2.625rem;
+
+    & .overline {
+      margin-bottom: 0.5rem;
+    }
+
+    & h1 {
+      font: var(--display-medium);
+      text-transform: uppercase;
+    }
+  }
+
+  & #sort {
+    margin-bottom: 5rem;
+
+    & .sort-details {
+      margin-bottom: 2.5rem;
+
+      & h2 {
+        font: var(--label-large);
+        color: var(--content-primary);
+        text-transform: uppercase;
+      }
+
+      & p {
+        font: var(--paragraph-medium);
+        color: var(--content-tertiary);
+      }
+    }
+
+    & .numbers-wrapper {
+      display: flex;
+      gap: 0.75rem;
+
+      & div {
+        width: 5.375rem;
+        margin-bottom: 1.25rem;
+
+        & p:first-child {
+          font: var(--label-medium);
+          color: var(--content-secondary);
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 0.75rem;
+        }
+
+        & p:nth-child(2) {
+          font: var(--display-small);
+          color: var(--content-primary);
+          text-align: center;
+          background-color: var(--background-secondary);
+          border-radius: 0.5rem;
+          padding-block: 0.3rem;
+        }
+      }
+    }
+
+    & .toggle-wrapper {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 3.5rem;
+
+      & span {
+        font: var(--paragraph-small);
+      }
+    }
+
+    & .btn-wrapper {
+      background: linear-gradient(var(--gradient-border));
+
+      height: 3.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 0.5rem;
+
+      & button {
+        border: none;
+        border-radius: 0.4rem;
+        width: 100%;
+        height: 3.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        font: var(--label-medium);
+        color: var(--content-primary);
+        text-transform: uppercase;
+
+        background-color: var(--background-tertiary);
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--background-secondary);
+          width: calc(100% - 4px);
+          height: calc(3.5rem - 4px);
+        }
+      }
+    }
+  }
+
+  & #details {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+
+    & > div {
+      display: flex;
+      align-items: start;
+      gap: 0.5rem;
+    }
+
+    & h3 {
+      font: var(--paragraph-medium);
+      color: var(--content-brand);
+    }
+
+    & p {
+      font: var(--paragraph-small);
+      color: var(--content-secondary);
+    }
+  }
+}
+
 footer {
   font: var(--paragraph-small);
 
@@ -14,10 +146,7 @@ footer {
     color: var(--content-primary);
 
     &:hover {
-      background: linear-gradient(
-        90deg,
-        var(--gradient-background)
-      );
+      background: linear-gradient(90deg, var(--gradient-background));
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -32,28 +161,54 @@ footer {
   }
 }
 
-main {
-  padding-inline: 2.25rem;
-
-  & h1 {
-    font: var(--display-medium);
-    text-transform: uppercase;
-  }
-}
-
-@media (width > 768px) {
+@media (width > 80rem) {
   header {
-    display: flex;
-    justify-content: start;
+    display: block;
+
+    margin-inline: auto;
+    width: 75rem;
   }
 
   main {
     margin-inline: auto;
-    width: 68.625rem;
+    margin-top: 8rem;
+    width: 75rem;
+    padding-inline: 0;
 
-    & h1 {
-      font: var(--display-large);
-      text-transform: uppercase;
+    display: grid;
+    gap: 6.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 10.875rem);
+    align-items: center;
+
+    & #hero {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-bottom: 0;
+      
+      & h1 {
+        font: var(--display-large);
+        text-transform: uppercase;
+      }
     }
+
+    & #sort {
+      grid-column: 2/3;
+      grid-row: 1/3;
+
+      margin-bottom: 0;
+    }
+
+    & #details {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
   }
 }
