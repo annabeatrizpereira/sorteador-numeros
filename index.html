@@ -23,46 +23,77 @@
         <h1>Sorteador de números</h1>
       </section>
 
-      <section id="sort">
-        <div class="sort-details">
-          <h2>Quero Sortear:</h2>
-          <p>
-            Defina o intervalo e a quantidade de números, clique em "Sortear" e
-            veja os resultados na tela. É rápido e fácil!
-          </p>
-        </div>
+      <section id="sort" class="">
+        <form action="#">
+          <div class="sort-details">
+            <h2>Quero Sortear:</h2>
+            <p>
+              Defina o intervalo e a quantidade de números, clique em "Sortear"
+              e veja os resultados na tela. É rápido e fácil!
+            </p>
+          </div>
 
-        <div class="numbers-wrapper">
-          <div>
-            <p>Números</p>
-            <p>2</p>
+          <div class="numbers-wrapper">
+            <div>
+              <p>Números</p>
+              <div class="input-wrapper">
+                <input type="number" min="0" max="100" id="numbers"/>
+              </div>
+            </div>
+            <div>
+              <p>De</p>
+              <div class="input-wrapper">
+                <input type="number" min="0" max="100" id="from" />
+              </div>
+            </div>
+            <div>
+              <p>À</p>
+              <div class="input-wrapper">
+                <input type="number" min="0" max="100" id="to" />
+              </div>
+            </div>
           </div>
-          <div>
-            <p>De</p>
-            <p>1</p>
-          </div>
-          <div>
-            <p>À</p>
-            <p>100</p>
-          </div>
-        </div>
 
-        <div class="toggle-wrapper">
-          <div>
-            <label class="switch">
-              <input type="checkbox" id="darkMode" />
-              <span class="slider"></span>
-            </label>
+          <div class="toggle-wrapper">
+            <div>
+              <label class="switch">
+                <input type="checkbox" id="darkMode" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <span>Não repetir esse número</span>
           </div>
-          <span>Não repetir esse número</span>
+
+          <div class="btn-wrapper">
+            <button type="submit">
+              <span>Sortear</span>
+              <img
+                src="./assets/icons/arrow-right.svg"
+                alt="arrow right icon"
+              />
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section id="result" class="hidden">
+        <h2>Resultado do sorteio</h2>
+        <p>1° resultado</p>
+
+        <div class="result-numbers">
+          <span>23</span>
+          <span>12</span>
         </div>
 
         <div class="btn-wrapper">
-          <button>
-            <span>Sortear</span>
-            <img src="./assets/icons/arrow-right.svg" alt="arrow right icon" />
-          </button>
-        </div>
+            <button type="button">
+              <span>Sortear novamente</span>
+              <div class="img-wrapper">
+                <img src="./assets/icons/circle-arrow.svg" alt="circle arrow">
+              <img src="./assets/icons/play.svg" alt="play button">
+              </div>
+            </button>
+          </div>
       </section>
 
       <section id="details">
@@ -98,7 +129,11 @@
 
     <footer>
       Feito com <img src="./assets/icons/heart.svg" alt="" /> por
-      <a href="#">annabeatrizpereira</a>
+      <a
+        href="https://www.linkedin.com/in/anna-beatriz-pereira-9686b0233/"
+        target="_blank"
+        >annabeatrizpereira</a
+      >
     </footer>
 
     <script src="scripts.js"></script>
