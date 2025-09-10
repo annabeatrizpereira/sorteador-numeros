@@ -134,6 +134,7 @@ main {
 
   & #result {
     margin-block: 6rem;
+
     & h2,
     p {
       text-transform: uppercase;
@@ -153,15 +154,35 @@ main {
 
     & .result-numbers {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
 
+      min-height: 5rem;
       margin-block: 2.5rem;
 
-      & span {
+      .wrapper {
+        position: relative;
+        width: 6.25rem;
+        height: 6.25rem;
+      }
+
+      .box,
+      .box {
+        position: absolute;
+        animation: result 5s forwards;
+      }
+
+      & .number,
+      .number {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font: bold 3rem/150% "Roboto Mono";
-        color: var(--content-brand);
+        animation: appear 5s forwards;
       }
     }
 
@@ -238,7 +259,7 @@ footer {
   main {
     margin-inline: auto;
     margin-block: 4rem;
-    width: 75rem;
+    max-width: 75rem;
     padding-inline: 0;
 
     display: grid;
@@ -278,6 +299,7 @@ footer {
   }
 }
 
+/* animações */
 @keyframes move {
   from {
     transform: translateX(0);
@@ -295,5 +317,175 @@ footer {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes result {
+  0% {
+    opacity: 0;
+    scale: 0;
+    background-color: var(--content-brand);
+  }
+
+  20% {
+    opacity: 0;
+    scale: 0;
+    background-color: var(--content-brand);
+  }
+
+  30% {
+    opacity: 1;
+    scale: 1;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--content-brand);
+  }
+
+  38.5% {
+    opacity: 1;
+    scale: 1;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(0deg);
+    background-color: var(--content-brand);
+  }
+
+  46.2% {
+    opacity: 1;
+    scale: 1;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(60deg);
+    background-color: var(--content-brand);
+  }
+
+  53.9% {
+    opacity: 1;
+    scale: 1;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(120deg);
+    background-color: var(--content-brand);
+  }
+
+  61.6% {
+    opacity: 1;
+    scale: 1;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+    background-color: var(--content-brand);
+  }
+
+  69.3% {
+    opacity: 1;
+    scale: 1;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(240deg);
+    background-color: var(--content-brand);
+  }
+
+  77% {
+    opacity: 1;
+    scale: 1;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(270deg);
+    background-color: var(--content-brand);
+  }
+
+  84.7% {
+    opacity: 0;
+    scale: 0;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(300deg);
+    background-color: var(--content-brand);
+  }
+
+  100% {
+    opacity: 0;
+    scale: 0;
+
+    border-radius: 1.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(360deg);
+    background-color: var(--content-brand);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  38.5% {
+    opacity: 0;
+    color: var(--content-inverse);
+  }
+
+  70% {
+    color: var(--content-inverse);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    color: var(--content-brand);
   }
 }
