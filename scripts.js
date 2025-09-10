@@ -38,13 +38,13 @@ form.addEventListener("submit", (e) => {
   }
 
   if(Number(inputNumbers.value) === 0){
-    alert("A quantidade dos números não pode ser 0!");
+    alert("A quantidade dos números a ser sorteado não pode ser 0!");
     return;
   }
 
   // valida se o número final é menor que o inicial
   if (Number(inputTo.value) < Number(inputFrom.value)) {
-    alert("O número inicial não pode ser menor do que o final!");
+    alert("O número inicial não pode ser maior do que o final!");
     return;
   }
 
